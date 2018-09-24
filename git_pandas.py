@@ -29,3 +29,5 @@ df = pd.DataFrame(my_data,
 
 
 #Get the mean of the Average Spending
+
+Average Spending = 45.4
