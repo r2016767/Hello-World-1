@@ -15,7 +15,7 @@ import numpy as np
 #%%
 
 my_data = {'first_name': ['Jason', 'Molly', 'Tina', 'Jake', 'Amy'], 
-        'age': [42, 52, 36, 24, 73], 
+        'myage': [42, 52, 36, 24, 73], 
         'RFM_Star': [5, 1, 3, None,2],
         'AvgSpend': [100, 2.5,57,62, 45]}
 
