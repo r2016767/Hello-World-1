@@ -29,3 +29,5 @@ df["age"].mean()
 
 
 #Get the mean of the Average Spending
+
+Average Spending = 45.4
