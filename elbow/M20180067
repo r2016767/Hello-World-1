@@ -1,0 +1,30 @@
+from pylab import plot,show
+from numpy import vstack,array
+from numpy.random import rand
+from scipy.cluster.vq import kmeans,vq, kmeans2
+import numpy as np
+from scipy.spatial.distance import euclidean
+
+for k in list_K:
+    centroids,labels = kmeans2(data,
+                           k, 
+                           minit = 'points')
+    L = []
+    my_labels = list(set(labels))
+    
+    for j in my_labels:
+    #For each row of my array
+        for i in range(data.shape[0]):
+            if labels[i] == my_labels[j]:
+                newDistance = euclidean(centroids[j,:],data[i,:])
+                L.append(newDistance)
+            
+
+    list_L.append(sum(L))
+import matplotlib.pyplot as plt
+
+plt.plot(list_K, list_L)
+plt.axis([0, max(list_K), 0, max(list_L)])
+plt.show()
+#Termina aqui
+
